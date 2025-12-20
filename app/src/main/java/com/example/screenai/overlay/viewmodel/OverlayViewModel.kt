@@ -24,7 +24,10 @@ data class OverlayUiState(
     val promptInput: String = "",
     val result: AIResponse? = null,
     val customPrompts: List<CustomPrompt> = emptyList(),
-    val currentScreenshot: Bitmap? = null
+    val currentScreenshot: Bitmap? = null,
+    // 버튼 위치 추가
+    val buttonX: Int = 0,
+    val buttonY: Int = 200
 )
 
 class OverlayViewModel @Inject constructor(
@@ -40,6 +43,15 @@ class OverlayViewModel @Inject constructor(
             promptRepository.customPrompts.collect { prompts ->
                 _uiState.update { it.copy(customPrompts = prompts) }
             }
+        }
+    }
+
+    fun updateButtonPosition(dx: Float, dy: Float) {
+        _uiState.update {
+            it.copy(
+                buttonX = it.buttonX + dx.toInt(),
+                buttonY = it.buttonY + dy.toInt()
+            )
         }
     }
 

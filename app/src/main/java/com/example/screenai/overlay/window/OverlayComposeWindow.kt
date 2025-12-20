@@ -23,6 +23,10 @@ class OverlayComposeWindow @Inject constructor(
     private lateinit var viewModel: OverlayViewModel
     private var isExpanded = false
 
+    // 버튼 위치 저장
+    private var buttonX = 0
+    private var buttonY = 200
+
     fun setScreenshotProvider(provider: () -> Bitmap?) {
         screenshotProvider = provider
     }
@@ -33,9 +37,6 @@ class OverlayComposeWindow @Inject constructor(
         composeView.setContent {
             OverlayTheme {
                 OverlayScreen(
-                    composeView = composeView,
-                    windowManager = windowManager,
-                    layoutParams = params,
                     viewModel = viewModel,
                     onRequestScreenshot = { screenshotProvider?.invoke() },
                     onUpdateFocusable = { focusable ->
@@ -43,6 +44,18 @@ class OverlayComposeWindow @Inject constructor(
                     },
                     onExpandOverlay = { expand ->
                         updateOverlaySize(expand)
+                    },
+                    onDragButton = { dx, dy ->
+                        // 축소 상태에서만 버튼 위치 업데이트
+                        if (!isExpanded) {
+                            viewModel.updateButtonPosition(dx, dy)
+                            val state = viewModel.uiState.value
+                            params.x = state.buttonX
+                            params.y = state.buttonY
+                            if (composeView.isAttachedToWindow) {
+                                windowManager.updateViewLayout(composeView, params)
+                            }
+                        }
                     }
                 )
             }
@@ -66,8 +79,8 @@ class OverlayComposeWindow @Inject constructor(
             PixelFormat.TRANSLUCENT
         ).apply {
             gravity = Gravity.TOP or Gravity.START
-            x = 0
-            y = 200
+            x = buttonX
+            y = buttonY
         }
     }
 
@@ -86,6 +99,8 @@ class OverlayComposeWindow @Inject constructor(
         if (isExpanded == expand) return
         isExpanded = expand
 
+        val state = viewModel.uiState.value
+
         if (expand) {
             // 전체 화면으로 확장
             params.width = WindowManager.LayoutParams.MATCH_PARENT
@@ -93,11 +108,12 @@ class OverlayComposeWindow @Inject constructor(
             params.x = 0
             params.y = 0
         } else {
-            // 플로팅 버튼 크기로 축소
+            // 플로팅 버튼 크기로 축소, 저장된 위치로 복원
             val size = (88 * context.resources.displayMetrics.density).toInt()
             params.width = size
             params.height = size
-            // 위치는 마지막 드래그 위치 유지하거나 기본값
+            params.x = state.buttonX
+            params.y = state.buttonY
         }
 
         if (composeView.isAttachedToWindow) {
