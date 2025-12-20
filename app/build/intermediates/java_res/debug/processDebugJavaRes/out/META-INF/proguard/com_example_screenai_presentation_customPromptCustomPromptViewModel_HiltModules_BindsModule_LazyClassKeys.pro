@@ -1,0 +1,1 @@
+-keep,allowobfuscation,allowshrinking class com.example.screenai.presentation.customPrompt.CustomPromptViewModel

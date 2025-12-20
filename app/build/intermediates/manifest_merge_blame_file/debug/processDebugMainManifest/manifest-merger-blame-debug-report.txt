@@ -1,0 +1,187 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.screenai"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <!-- 인터넷 권한 -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:6:5-67
+12-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:7:5-79
+13-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:7:22-76
+14
+15    <!-- 다른 앱 위에 표시 권한 -->
+16    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+16-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:10:5-78
+16-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:10:22-75
+17
+18    <!-- 포그라운드 서비스 권한 -->
+19    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+19-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:13:5-77
+19-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:13:22-74
+20    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+20-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:14:5-89
+20-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:14:22-86
+21
+22    <!-- 미디어 프로젝션 (스크린샷) -->
+23    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+23-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:17:5-94
+23-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:17:22-91
+24
+25    <!-- 알림 권한 (Android 13+) -->
+26    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+26-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:20:5-77
+26-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:20:22-74
+27
+28    <permission
+28-->[androidx.core:core:1.15.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/3b82126487c178ef14367eb45d2e4e57/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
+29        android:name="com.example.screenai.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+29-->[androidx.core:core:1.15.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/3b82126487c178ef14367eb45d2e4e57/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
+30        android:protectionLevel="signature" />
+30-->[androidx.core:core:1.15.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/3b82126487c178ef14367eb45d2e4e57/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
+31
+32    <uses-permission android:name="com.example.screenai.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+32-->[androidx.core:core:1.15.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/3b82126487c178ef14367eb45d2e4e57/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
+32-->[androidx.core:core:1.15.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/3b82126487c178ef14367eb45d2e4e57/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
+33
+34    <application
+34-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:22:5-53:19
+35        android:name="com.example.screenai.ScreenAIApplication"
+35-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:23:9-44
+36        android:allowBackup="true"
+36-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:24:9-35
+37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+37-->[androidx.core:core:1.15.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/3b82126487c178ef14367eb45d2e4e57/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
+38        android:debuggable="true"
+39        android:extractNativeLibs="false"
+40        android:icon="@mipmap/ic_launcher"
+40-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:25:9-43
+41        android:label="@string/app_name"
+41-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:26:9-41
+42        android:roundIcon="@mipmap/ic_launcher_round"
+42-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:27:9-54
+43        android:supportsRtl="true"
+43-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:28:9-35
+44        android:testOnly="true"
+45        android:theme="@style/Theme.ScreenAI" >
+45-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:29:9-46
+46        <activity
+46-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:32:9-40:20
+47            android:name="com.example.screenai.presentation.MainActivity"
+47-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:33:13-54
+48            android:exported="true"
+48-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:34:13-36
+49            android:theme="@style/Theme.ScreenAI" >
+49-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:35:13-50
+50            <intent-filter>
+50-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:36:13-39:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:37:17-69
+51-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:37:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:38:17-77
+53-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:38:27-74
+54            </intent-filter>
+55        </activity>
+56
+57        <!-- 오버레이 서비스 -->
+58        <service
+58-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:43:9-51:19
+59            android:name="com.example.screenai.service.OverlayService"
+59-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:44:13-51
+60            android:enabled="true"
+60-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:45:13-35
+61            android:exported="false"
+61-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:46:13-37
+62            android:foregroundServiceType="specialUse|mediaProjection" >
+62-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:47:13-71
+63            <property
+63-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:48:13-50:46
+64                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+64-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:49:17-76
+65                android:value="overlay_ui" />
+65-->/Users/jeonbyeongseon/AndroidProjects/ScreenAI/app/src/main/AndroidManifest.xml:50:17-43
+66        </service>
+67
+68        <provider
+68-->[androidx.emoji2:emoji2:1.3.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/b4f1059cf81315cf39f570207d18a31f/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+69            android:name="androidx.startup.InitializationProvider"
+69-->[androidx.emoji2:emoji2:1.3.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/b4f1059cf81315cf39f570207d18a31f/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+70            android:authorities="com.example.screenai.androidx-startup"
+70-->[androidx.emoji2:emoji2:1.3.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/b4f1059cf81315cf39f570207d18a31f/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+71            android:exported="false" >
+71-->[androidx.emoji2:emoji2:1.3.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/b4f1059cf81315cf39f570207d18a31f/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+72            <meta-data
+72-->[androidx.emoji2:emoji2:1.3.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/b4f1059cf81315cf39f570207d18a31f/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+73                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+73-->[androidx.emoji2:emoji2:1.3.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/b4f1059cf81315cf39f570207d18a31f/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+74                android:value="androidx.startup" />
+74-->[androidx.emoji2:emoji2:1.3.0] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/b4f1059cf81315cf39f570207d18a31f/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+75            <meta-data
+75-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/f90c9b7f71b630b7ee8287adb6e2011f/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:29:13-31:52
+76                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+76-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/f90c9b7f71b630b7ee8287adb6e2011f/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:30:17-78
+77                android:value="androidx.startup" />
+77-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/f90c9b7f71b630b7ee8287adb6e2011f/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:31:17-49
+78            <meta-data
+78-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+79                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+79-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+80                android:value="androidx.startup" />
+80-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+81        </provider>
+82
+83        <activity
+83-->[androidx.compose.ui:ui-tooling-android:1.7.6] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/bb89dc5e826a66f5e9c13b9bcdbc9b71/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+84            android:name="androidx.compose.ui.tooling.PreviewActivity"
+84-->[androidx.compose.ui:ui-tooling-android:1.7.6] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/bb89dc5e826a66f5e9c13b9bcdbc9b71/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+85            android:exported="true" />
+85-->[androidx.compose.ui:ui-tooling-android:1.7.6] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/bb89dc5e826a66f5e9c13b9bcdbc9b71/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+86
+87        <receiver
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+88            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+89            android:directBootAware="false"
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+90            android:enabled="true"
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+91            android:exported="true"
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+92            android:permission="android.permission.DUMP" >
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+93            <intent-filter>
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+94                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+95            </intent-filter>
+96            <intent-filter>
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+97                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+98            </intent-filter>
+99            <intent-filter>
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+100                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+101            </intent-filter>
+102            <intent-filter>
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+103                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jeonbyeongseon/.gradle/caches/8.9/transforms/4d15de6c26cd31f93c964ffdb7f94ef8/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+104            </intent-filter>
+105        </receiver>
+106    </application>
+107
+108</manifest>
